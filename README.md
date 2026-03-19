@@ -1,50 +1,41 @@
-# 🏥 Hospital Management System (C++)
+# Hospital Management System (C++)
 
-A robust Hospital Management System built with **C++** using Object-Oriented Programming (OOP) principles. This system manages patient records for both **O.P.D. (Outpatient Department)** and **Emergency** services, handling billing and specialist assignments.
+A comprehensive **Hospital Management System** built with **C++** using **Object-Oriented Programming (OOP)** principles. This system manages patient records for both **Outpatient (O.P.D.)** and **Emergency** services, handling data storage, financial records, and patient searching/sorting.
 
-## ✨ Features
+## 🚀 Features
 
-- **Add Patient Records:** Differentiate between OPD and Emergency patients.
-- **Specialist Management:** Uses `std::map` and Iterators to assign specialists and room numbers automatically.
-- **Financial Records:** Calculates total charges, deposits, and returns based on the service type.
-- **Search & Edit:** Search for any patient using their unique **Record Number**.
-- **Data Persistence:** Manage a database of patients using `std::vector` of base class pointers (Polymorphism).
-- **Clean UI:** Simple command-line interface with organized tables and headers.
+- **Dual Service Modules:** Specialized handling for O.P.D. and Emergency patients.
+- **Data Persistence:** Records are saved to and loaded from a flat-file database (`patients_data.txt`).
+- **Financial Management:** Automatic calculation of charges, deposits, and returns based on the service type.
+- **Advanced Search & Edit:** Find or modify patient details using their **Record Number** or **Full Name**.
+- **Automated Sorting:** View patient lists sorted **alphabetically** or by **date/service type**.
+- **Interactive UI:** User-friendly console interface with step-by-step navigation.
 
-## 🛠️ Concepts Applied (OOP)
+## 🛠️ Technical Implementation (OOP Concepts)
 
-- **Inheritance:** `OPD` and `emergency` classes inherit from the `patient` base class.
-- **Polymorphism:** Used `virtual` functions and `override` to handle different patient types dynamically.
-- **Encapsulation:** Protected and private data members with public getter/setter methods.
-- **STL Containers:** Utilized `std::vector` for record management and `std::map` for specialist lookups.
+The project demonstrates core OOP pillars:
+- **Inheritance:** A base `patient` class with derived `OPD` and `emergency` classes.
+- **Polymorphism:** Using `virtual` functions for dynamic binding of patient displays and data editing.
+- **Encapsulation:** Protecting patient data and financial records within private/protected members.
+- **Composition:** Integrating a `Financial_Record` object within the patient class to manage billing.
 
-## 📁 Project Structure
+## 📁 File Structure
 
-* `patient.h / .cpp`: Base class containing general patient information.
-* `OPD.h / .cpp`: Derived class for outpatient records and specialist mapping.
-* `emergency.h / .cpp`: Derived class for emergency cases and flat-rate billing.
-* `Financial_Record.h / .cpp`: Handles billing logic and expenditure reports.
-* `HospitalSystem.h / .cpp`: The core engine managing the database and user operations.
+| File | Description |
+| :--- | :--- |
+| `OOP project.cpp` | The main entry point containing the menu logic. |
+| `HospitalSystem.h/.cpp` | The controller class that manages the patient collection (Vector). |
+| `patient.h/.cpp` | Base class defining general patient attributes. |
+| `OPD.h/.cpp` | Derived class for Outpatient Department features. |
+| `emergency.h/.cpp` | Derived class for Emergency service features. |
+| `Financial_Record.h/.cpp` | Class dedicated to billing and expenditure logic. |
 
-## 🚀 How to Run
+## 💻 How to Run
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/YourUsername/Hospital-Management-System.git](https://github.com/YourUsername/Hospital-Management-System.git)
-    ```
-2.  **Compile the project:**
-    Use any C++ compiler (like G++):
-    ```bash
-    g++ *.cpp -o HospitalSystem
-    ```
-3.  **Run the application:**
-    ```bash
-    ./HospitalSystem
-    ```
+1. Clone the repository to your local machine.
+2. Ensure all `.h` and `.cpp` files are in the same directory.
+3. Compile the project using any C++ compiler (e.g., `g++ *.cpp -o HospitalSystem`).
+4. Run the executable and follow the on-screen instructions.
 
-## 📝 Requirements
-* C++17 or higher (for structured bindings and modern STL features).
-* Any standard C++ Compiler (GCC, Clang, or MSVC).
-
----
-Developed as a part of an Object-Oriented Programming Project.
+## 📊 Documentation
+The project includes a **UML Class Diagram** and a **Flowchart** to visualize the system architecture and logic flow.
